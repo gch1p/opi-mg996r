@@ -29,7 +29,6 @@ if __name__ == '__main__':
                         raise ValueError(f'invalid degree value in {state_file}')
         except (IOError, ValueError) as e:
             logging.exception(e)
-            start_degree = default_degree
 
     servo = MG996R(args.pin, start_degree)
     servo.move(args.deg)
