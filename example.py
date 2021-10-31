@@ -3,7 +3,7 @@ import os, logging
 from argparse import ArgumentParser
 from mg996r import MG996R
 
-default_degree = 360
+start_degree = 360
 state_file = '.servo-state'
 
 if __name__ == '__main__':
@@ -16,10 +16,8 @@ if __name__ == '__main__':
     parser.add_argument('--pin', type=str, default='PA6',
                         help='GPIO pin to use')
     parser.add_argument('--reset', action='store_true',
-                        help=f'Use clean default state (degree = {default_degree})')
+                        help=f'Use clean default state (degree = {start_degree})')
     args = parser.parse_args()
-
-    start_degree = default_degree
 
     # restore previous degree from a file
     if not args.reset:
