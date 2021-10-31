@@ -1,0 +1,1 @@
+git+git://github.com/duxingkei33/orangepi_PC_gpio_pyH3@master
